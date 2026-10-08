@@ -1,0 +1,35 @@
+name: Post a bulletin
+description: Publish a story to the CDT Bulletin (maintainers only; it posts automatically).
+title: "[Bulletin] "
+labels: ["bulletin"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences. The issue title above is the headline.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [News, Events, Research, Community, Notice, Deadlines]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Optional full text. Blank line = new paragraph.
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Optional http(s) URL.
+  - type: checkboxes
+    id: breaking
+    attributes:
+      label: Breaking
+      options:
+        - label: Breaking news (show in the red ticker)

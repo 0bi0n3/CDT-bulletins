@@ -22,7 +22,10 @@
     const tag = el("div", "tag");
     if (b.breaking) tag.append(el("span", "flash", "Breaking"));
     tag.append(document.createTextNode(b.category || "News"));
-    a.append(tag, el(lead ? "h2" : "h3", "", b.title));
+    const h = el(lead ? "h2" : "h3");
+    if (b.slug) { const l = el("a", "", b.title); l.href = "story/" + b.slug + ".html"; l.style.textDecoration = "none"; h.append(l); }
+    else h.textContent = b.title;
+    a.append(tag, h);
     if (b.summary) a.append(el("p", lead ? "summary" : "", b.summary));
     if (b.body) b.body.split(/\n{2,}/).forEach((p) => a.append(el("p", "", p)));
     const meta = el("div", "meta", [b.author, fmtTime.format(new Date(b.date))].filter(Boolean).join(" · "));
