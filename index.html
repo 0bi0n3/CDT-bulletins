@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The CDT Bulletin | AI for Digital Media Inclusion</title>
+  <meta name="description" content="News bulletin board for the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="application/json" href="bulletins.json" title="Bulletins feed">
+</head>
+<body>
+  <a class="skip" href="#stories">Skip to stories</a>
+
+  <div class="topbar">
+    <span id="today"></span>
+    <span>University of Surrey &middot; Guildford</span>
+    <span id="edition">Doctoral Training Edition</span>
+  </div>
+
+  <header class="masthead">
+    <p class="kicker">Centre for Doctoral Training in</p>
+    <h1>The CDT Bulletin</h1>
+    <p class="tagline">AI for Digital Media Inclusion &mdash; news, notices &amp; dispatches from the cohort</p>
+  </header>
+
+  <div class="breaking" id="breaking" role="region" aria-label="Breaking news" hidden>
+    <span class="breaking-label">Breaking</span>
+    <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
+  </div>
+
+  <nav class="sections" id="sections" aria-label="Sections"></nav>
+
+  <main id="stories">
+    <div class="toolbar">
+      <label for="q" class="sr">Search bulletins</label>
+      <input id="q" type="search" placeholder="Search the bulletin&hellip;">
+    </div>
+    <section id="lead" aria-live="polite"></section>
+    <section id="grid" class="grid"></section>
+    <p id="empty" class="empty" hidden>No stories match. Stop the presses.</p>
+  </main>
+
+  <footer>
+    <p>The CDT Bulletin is an informal community board for the Centre for Doctoral Training in AI for Digital Media Inclusion at the University of Surrey.</p>
+    <p><a href="bulletins.json">Raw feed</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+:root {
+  --paper: #f6f1e7;
+  --ink: #1a1a1a;
+  --muted: #5c5a55;
+  --rule: #1a1a1a;
+  --accent: #b3122a;
+  --navy: #0e2a47;
+  --card: #fffdf8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#141414; --ink:#ece7dc; --muted:#a39e92; --rule:#ece7dc; --accent:#ff4d5e; --navy:#0b1d32; --card:#1c1c1c; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family: Georgia, "Times New Roman", serif; line-height:1.5; }
+a { color:inherit; }
+.sr, .skip:not(:focus) { position:absolute; left:-9999px; }
+.skip:focus { position:fixed; top:8px; left:8px; background:#fff; color:#000; padding:8px; z-index:9; }
+
+.topbar { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; background:var(--navy); color:#fff; padding:.4rem 1rem; font:600 .75rem/1.4 system-ui, sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+
+.masthead { text-align:center; padding:1.5rem 1rem 1rem; border-bottom:4px double var(--rule); margin:0 auto; max-width:1100px; }
+.kicker { margin:0; font:600 .8rem system-ui, sans-serif; letter-spacing:.25em; text-transform:uppercase; color:var(--muted); }
+.masthead h1 { margin:.2rem 0; font-family:"Playfair Display", Didot, Georgia, serif; font-size:clamp(2.4rem, 8vw, 5rem); font-weight:900; letter-spacing:-.02em; line-height:1.05; }
+.tagline { margin:0; font-style:italic; color:var(--muted); }
+
+.breaking { display:flex; align-items:stretch; max-width:1100px; margin:1rem auto 0; background:var(--accent); color:#fff; overflow:hidden; font-family:system-ui, sans-serif; }
+.breaking[hidden] { display:none; }
+.breaking-label { flex:none; background:#000; padding:.6rem .9rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; font-size:.8rem; display:flex; align-items:center; gap:.5rem; }
+.breaking-label::before { content:""; width:.6rem; height:.6rem; border-radius:50%; background:var(--accent); animation:pulse 1.2s infinite; }
+.ticker { overflow:hidden; flex:1; display:flex; align-items:center; }
+.ticker-track { display:inline-flex; white-space:nowrap; animation:scroll var(--dur, 30s) linear infinite; padding-left:100%; }
+.ticker:hover .ticker-track { animation-play-state:paused; }
+.ticker-track span { padding:0 2rem; font-weight:600; }
+.ticker-track span::after { content:"\25C6"; margin-left:2rem; opacity:.6; }
+@keyframes scroll { to { transform:translateX(-100%); } }
+@keyframes pulse { 50% { opacity:.2; } }
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation:none; padding-left:0; flex-wrap:wrap; white-space:normal; }
+  .breaking-label::before { animation:none; }
+}
+
+.sections { max-width:1100px; margin:1rem auto 0; display:flex; gap:.25rem; flex-wrap:wrap; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:.25rem 1rem; }
+.sections button { background:none; border:0; color:inherit; cursor:pointer; font:700 .8rem system-ui, sans-serif; letter-spacing:.1em; text-transform:uppercase; padding:.5rem .8rem; }
+.sections button:hover { color:var(--accent); }
+.sections button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+
+main { max-width:1100px; margin:0 auto; padding:1rem; }
+.toolbar input { width:100%; padding:.6rem .8rem; font:inherit; border:1px solid var(--rule); background:var(--card); color:inherit; }
+
+.tag { font:800 .7rem system-ui, sans-serif; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); }
+.tag .flash { background:var(--accent); color:#fff; padding:.1rem .4rem; margin-right:.4rem; }
+.meta { font:.78rem system-ui, sans-serif; color:var(--muted); }
+
+#lead { margin:1.2rem 0; padding-bottom:1.2rem; border-bottom:4px double var(--rule); }
+#lead h2 { font-family:"Playfair Display", Didot, Georgia, serif; font-size:clamp(1.8rem, 5vw, 3.2rem); line-height:1.1; margin:.3rem 0 .6rem; }
+#lead p.summary { font-size:1.2rem; max-width:48rem; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.2rem; }
+.story { background:var(--card); border-top:3px solid var(--ink); padding:.8rem 1rem 1rem; }
+.story h3 { margin:.3rem 0; font-size:1.3rem; line-height:1.2; }
+.story p { margin:.4rem 0; }
+.read { font:700 .8rem system-ui, sans-serif; color:var(--accent); }
+
+.empty { text-align:center; font-style:italic; color:var(--muted); }
+footer { max-width:1100px; margin:2rem auto 0; padding:1rem; border-top:4px double var(--rule); text-align:center; font-size:.85rem; color:var(--muted); }

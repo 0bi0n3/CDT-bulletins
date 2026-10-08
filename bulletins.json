@@ -1,0 +1,34 @@
+{
+  "edition": "Doctoral Training Edition",
+  "bulletins": [
+    {
+      "date": "2026-10-08T09:00:00Z",
+      "title": "Welcome to the CDT Bulletin: your rapid-fire board for news and notices",
+      "summary": "Seminars, deadlines, papers, prizes and the odd stop-press, all in one place. Anyone with push access can add a story in under a minute.",
+      "category": "Notice",
+      "breaking": true,
+      "author": "The Editors"
+    },
+    {
+      "date": "2026-10-07T14:30:00Z",
+      "title": "Seminar: designing AI systems with, not for, disabled users",
+      "summary": "An open session on participatory design for accessible media technologies. Questions from all cohorts welcome.",
+      "category": "Events",
+      "author": "Events Desk"
+    },
+    {
+      "date": "2026-10-06T10:15:00Z",
+      "title": "Paper accepted: inclusive captioning evaluation beyond word error rate",
+      "summary": "Congratulations to the authors. Preprint to follow; watch this space.",
+      "category": "Research",
+      "author": "Research Desk"
+    },
+    {
+      "date": "2026-10-05T08:00:00Z",
+      "title": "Reminder: reading group moves to Thursdays",
+      "summary": "Same room, new day. Bring a paper you disagree with.",
+      "category": "Community",
+      "author": "The Editors"
+    }
+  ]
+}
