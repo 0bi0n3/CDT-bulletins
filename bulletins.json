@@ -2,6 +2,13 @@
   "edition": "2026 Edition",
   "bulletins": [
     {
+      "date": "2026-10-08T09:12:08Z",
+      "title": "CDT Briefing Update + Sandwiches, starting 10:30am.",
+      "summary": "Stay tuned for all the latest announcements and insight into what sandwiches will feature this lunchtime.",
+      "category": "Notice",
+      "breaking": true
+    },
+    {
       "date": "2026-10-08T08:57:02Z",
       "title": "Simona's PhD Viva Clashes with CDT Briefing!",
       "summary": "CDT scheduling isn't ideal again, do we support Simona or turn attention to updates that could probably be better in an email?",
