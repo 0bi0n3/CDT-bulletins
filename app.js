@@ -2,6 +2,7 @@
   const $ = (id) => document.getElementById(id);
   const fmt = new Intl.DateTimeFormat("en-GB", { dateStyle: "long" });
   const fmtTime = new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  const MAX_TICKER = 3; // only the latest N breaking stories run in the red banner
   let all = [], section = "All";
 
   const el = (tag, cls, text) => {
@@ -66,7 +67,7 @@
   }
 
   function renderTicker() {
-    const items = all.filter((b) => b.breaking);
+    const items = all.filter((b) => b.breaking).slice(0, MAX_TICKER); // `all` is newest-first
     $("breaking").hidden = items.length === 0;
     if (!items.length) return;
     const track = $("ticker");
