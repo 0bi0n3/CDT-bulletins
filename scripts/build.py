@@ -11,7 +11,7 @@ import argparse, datetime, email.utils, html, json, os, pathlib, re, shutil
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 STATIC = ["index.html", "style.css", "app.js", ".nojekyll"]
-TITLE = "The CDT Bulletin"
+TITLE = "AI for Digital Media Inclusion"
 DESC = "News from the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey and Royal Holloway."
 
 e = html.escape
@@ -44,7 +44,7 @@ def page(title, body, depth=0):
 <link rel="stylesheet" href="{up}style.css">
 <link rel="alternate" type="application/rss+xml" href="{up}feed.xml" title="{TITLE}">
 </head><body>
-<header class="masthead"><p class="kicker">Centre for Doctoral Training in AI for Digital Media Inclusion</p>
+<header class="masthead"><p class="kicker">Centre for Doctoral Training in</p>
 <h1><a href="{up}index.html" style="text-decoration:none">{TITLE}</a></h1></header>
 <main>{body}</main>
 <footer><p><a href="{up}index.html">Front page</a> &middot; <a href="{up}archive.html">Archive</a> &middot; <a href="{up}feed.xml">RSS</a></p></footer>
