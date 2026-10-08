@@ -22,9 +22,10 @@
     },
     {
       "date": "2026-10-06T10:15:00Z",
-      "title": "Paper accepted: inclusive captioning evaluation beyond word error rate",
-      "summary": "Congratulations to the authors. Preprint to follow; watch this space.",
-      "category": "Research"
+      "title": "CDT-wide resource repo! Compiled by the community.",
+      "summary": "This repo contains many suggested resources such as books and courses, but requires some updating! Anyone can contribute, just request push/pull access!",
+      "category": "Community",
+      "link": "https://github.com/0bi0n3/awesome-ai-for-digital-media-inclusion"
     },
     {
       "date": "2026-10-05T08:00:00Z",
