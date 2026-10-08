@@ -9,7 +9,7 @@ Every story is an entry in `bulletins.json`. Commit to `main` and the site redep
 - **Fastest (web/phone):** open `bulletins.json` on GitHub, press the pencil, paste a new object at the top of `bulletins`, commit.
 - **Command line:** `python3 scripts/post.py "Headline" -s "Summary" -c Events -b --push` (`-b` puts it in the red breaking ticker).
 
-Fields: `date` (ISO, UTC), `title`, `summary`, `category` (becomes a section tab), `author`, and optionally `body` (blank line = new paragraph), `link`, `breaking: true`. The newest story becomes the lead.
+Fields: `date` (ISO, UTC), `title`, `summary`, `category` (becomes a section tab), and optionally `body` (blank line = new paragraph), `link`, `breaking: true`. The newest story becomes the lead. Every story is credited to "The Editors"; no personal names are shown.
 
 - **Issue form:** Issues → New issue → *Post a bulletin*. When a maintainer (owner, member or collaborator) opens it, a workflow adds the story to `bulletins.json`, redeploys and closes the issue. Issues from anyone else are ignored.
 

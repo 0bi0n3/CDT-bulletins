@@ -5,37 +5,32 @@
       "date": "2026-10-08T08:57:02Z",
       "title": "Simona's PhD Viva Clashes with CDT Briefing!",
       "summary": "CDT scheduling isn't ideal again, do we support Simona or turn attention to updates that could probably be better in an email?",
-      "category": "News",
-      "author": "@0bi0n3"
+      "category": "News"
     },
     {
       "date": "2026-10-08T09:00:00Z",
       "title": "Welcome to the CDT Bulletin: your rapid-fire board for news and notices",
       "summary": "Seminars, deadlines, papers, prizes and the odd stop-press, all in one place.",
       "category": "Notice",
-      "breaking": true,
-      "author": "The Editors"
+      "breaking": true
     },
     {
       "date": "2026-10-07T14:30:00Z",
       "title": "Seminar: designing AI systems with, not for, disabled users",
       "summary": "An open session on participatory design for accessible media technologies. Questions from all cohorts welcome.",
-      "category": "Events",
-      "author": "Events Desk"
+      "category": "Events"
     },
     {
       "date": "2026-10-06T10:15:00Z",
       "title": "Paper accepted: inclusive captioning evaluation beyond word error rate",
       "summary": "Congratulations to the authors. Preprint to follow; watch this space.",
-      "category": "Research",
-      "author": "Research Desk"
+      "category": "Research"
     },
     {
       "date": "2026-10-05T08:00:00Z",
       "title": "Reminder: reading group moves to Thursdays",
       "summary": "Same room, new day. Bring a paper you disagree with.",
-      "category": "Community",
-      "author": "The Editors"
+      "category": "Community"
     }
   ]
 }

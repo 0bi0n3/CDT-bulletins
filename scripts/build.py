@@ -58,7 +58,7 @@ def story_html(b):
     when = parse_date(b["date"]).strftime("%-d %B %Y, %H:%M UTC")
     return (f'<article id="lead" style="border:0"><div class="tag">{"<span class=flash>Breaking</span>" if b.get("breaking") else ""}{e(b.get("category", "News"))}</div>'
             f'<h2>{e(b["title"])}</h2><p class="summary">{e(b.get("summary", ""))}</p>{paras}'
-            f'<div class="meta">{e(b.get("author", ""))} &middot; {when}</div>'
+            f'<div class="meta">The Editors &middot; {when}</div>'
             + (f'<p><a class="read" href="{e(link)}" rel="noopener">Read more &rarr;</a></p>' if link else "")
             + "</article>")
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Turn a bulletin issue-form submission into a bulletins.json entry.
 
-Reads ISSUE_TITLE, ISSUE_BODY, ISSUE_USER, ISSUE_CREATED from the environment
+Reads ISSUE_TITLE, ISSUE_BODY, ISSUE_CREATED from the environment
 (never interpolated into a shell command, so issue text cannot inject code).
 """
 import json, os, pathlib, re
@@ -18,7 +18,6 @@ entry = {
     "title": title,
     "summary": fields.get("Summary", ""),
     "category": fields.get("Category", "News") or "News",
-    "author": "@" + os.environ["ISSUE_USER"],
 }
 if fields.get("Details"): entry["body"] = fields["Details"]
 if re.match(r"https?://\S+$", fields.get("Link", "")): entry["link"] = fields["Link"]

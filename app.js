@@ -28,7 +28,7 @@
     a.append(tag, h);
     if (b.summary) a.append(el("p", lead ? "summary" : "", b.summary));
     if (b.body) b.body.split(/\n{2,}/).forEach((p) => a.append(el("p", "", p)));
-    const meta = el("div", "meta", [b.author, fmtTime.format(new Date(b.date))].filter(Boolean).join(" · "));
+    const meta = el("div", "meta", ["The Editors", fmtTime.format(new Date(b.date))].filter(Boolean).join(" · "));
     a.append(meta);
     const href = b.link && safeUrl(b.link);
     if (href) {
@@ -43,7 +43,7 @@
     const q = $("q").value.trim().toLowerCase();
     const list = all.filter((b) =>
       (section === "All" || b.category === section) &&
-      (!q || [b.title, b.summary, b.body, b.author, b.category].join(" ").toLowerCase().includes(q)));
+      (!q || [b.title, b.summary, b.body, b.category].join(" ").toLowerCase().includes(q)));
     const lead = $("lead"), grid = $("grid");
     lead.replaceChildren(); grid.replaceChildren();
     $("empty").hidden = list.length > 0;

@@ -21,7 +21,6 @@ jobs:
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_USER: ${{ github.event.issue.user.login }}
           ISSUE_CREATED: ${{ github.event.issue.created_at }}
         run: python3 scripts/issue_to_bulletin.py
       - name: Commit, deploy, close issue
