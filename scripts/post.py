@@ -11,6 +11,7 @@ p.add_argument("-s", "--summary", default="")
 p.add_argument("-c", "--category", default="News")
 p.add_argument("-l", "--link")
 p.add_argument("-b", "--breaking", action="store_true", help="show in the breaking-news ticker")
+p.add_argument("--headline", action="store_true", help="make this a lead-story candidate without the ticker")
 p.add_argument("--push", action="store_true", help="commit and push straight away")
 a = p.parse_args()
 
@@ -20,6 +21,7 @@ entry = {"date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d
          "title": a.title, "summary": a.summary, "category": a.category}
 if a.link: entry["link"] = a.link
 if a.breaking: entry["breaking"] = True
+if a.headline: entry["headline"] = True
 data["bulletins"].insert(0, entry)
 f.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 print("Added:", a.title)

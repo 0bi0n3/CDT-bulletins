@@ -21,7 +21,9 @@ entry = {
 }
 if fields.get("Details"): entry["body"] = fields["Details"]
 if re.match(r"https?://\S+$", fields.get("Link", "")): entry["link"] = fields["Link"]
-if "[x]" in fields.get("Breaking", "").lower(): entry["breaking"] = True
+flags = fields.get("Flags", "").lower()
+if "[x] breaking" in flags: entry["breaking"] = True
+if "[x] headline" in flags: entry["headline"] = True
 
 f = pathlib.Path("bulletins.json")
 data = json.loads(f.read_text())

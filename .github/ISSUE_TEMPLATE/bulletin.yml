@@ -28,8 +28,10 @@ body:
       label: Link
       description: Optional http(s) URL.
   - type: checkboxes
-    id: breaking
+    id: flags
     attributes:
-      label: Breaking
+      label: Flags
+      description: The lead story is always the newest one with a flag ticked.
       options:
-        - label: Breaking news (show in the red ticker)
+        - label: Breaking (red ticker and lead story)
+        - label: Headline (lead story only)

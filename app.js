@@ -20,7 +20,7 @@
   function story(b, lead) {
     const a = el(lead ? "article" : "article", lead ? "" : "story");
     const tag = el("div", "tag");
-    if (b.breaking) tag.append(el("span", "flash", "Breaking"));
+    if (b.breaking || b.headline) tag.append(el("span", "flash", b.breaking ? "Breaking" : "Headline"));
     tag.append(document.createTextNode(b.category || "News"));
     const h = el(lead ? "h2" : "h3");
     if (b.slug) { const l = el("a", "", b.title); l.href = "story/" + b.slug + ".html"; l.style.textDecoration = "none"; h.append(l); }
@@ -47,7 +47,10 @@
     const lead = $("lead"), grid = $("grid");
     lead.replaceChildren(); grid.replaceChildren();
     $("empty").hidden = list.length > 0;
-    list.forEach((b, i) => (i === 0 ? lead : grid).append(story(b, i === 0)));
+    // The lead is the newest story flagged breaking or headline (else simply the newest).
+    const flagged = list.findIndex((b) => b.breaking || b.headline);
+    const leadAt = flagged >= 0 ? flagged : 0;
+    list.forEach((b, i) => (i === leadAt ? lead : grid).append(story(b, i === leadAt)));
   }
 
   function renderSections() {
