@@ -2,6 +2,14 @@
   "edition": "2026 Edition",
   "bulletins": [
     {
+      "date": "2026-10-08T10:42:35Z",
+      "title": "Adrian announces and provides high level introduction to CDT AI PhD Showcase on 11th November 2026.",
+      "summary": "Not all researchers will be able to present - surely we should put UKRI/IAB peeps through the same death-by-powerpoint the researchers have had to go through?",
+      "body": "All that do not present will have opportunity (or be forced) to prepare and stand by posters about their research... followed by a traditional and classy sandwich lunch. Editors wonder if alcoholic drinks can be provided similar to the last showcase, it would definitely make the poster session more interesting.\n\nThird year CDT researcher makes a valid point: the showcase date lands very near to the CVPR deadline, which will likely impact attendance by those gunning for this deadline. CDT management remind researchers that the calendar date was sent a few months ago... Editors comment: CVPR deadline was announced, and is annually the same date, well ahead of CDT calendar invites.\n\nTension remains high between CDT priorities, researcher/supervisor priorities, and the reality of obtaining a PhD with submissions and publications. Everyone loves priorities over the singular priority, right?",
+      "category": "News",
+      "breaking": true
+    },
+    {
       "date": "2026-10-08T10:31:29Z",
       "title": "CDT-Bulletin Reader Requests 'Bridgerton-style' reporting on the events so far",
       "summary": "The Briefing, the Confirmation, the Ethics and the Placements, retold for the Season by the Editors, with names changed to protect the guilty.",
