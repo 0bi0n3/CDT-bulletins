@@ -12,7 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 STATIC = ["index.html", "style.css", "app.js", ".nojekyll"]
 TITLE = "The CDT Bulletin"
-DESC = "News from the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey."
+DESC = "News from the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey and Royal Holloway."
 
 e = html.escape
 

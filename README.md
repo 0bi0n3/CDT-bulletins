@@ -1,6 +1,6 @@
 # The CDT Bulletin
 
-A classic-newspaper style bulletin board for the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey. Static site: no build step.
+A classic-newspaper style bulletin board for the Centre for Doctoral Training in AI for Digital Media Inclusion, University of Surrey and Royal Holloway. Static site: no build step.
 
 ## Posting a story
 
